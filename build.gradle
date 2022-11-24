@@ -1,31 +1,16 @@
 buildscript {
     repositories {
-        jcenter()
+        google()
         mavenCentral()
-        mavenLocal()
-        maven { url 'https://maven.google.com' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-beta3'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
 allprojects {
-    version = VERSION_NAME
-    group = GROUP
-
     repositories {
-        jcenter()
+        google()
         mavenCentral()
-        mavenLocal()
-        maven { url 'https://maven.google.com' }
     }
 }
-
-ext {
-    libraries = [
-            annotations: "com.android.support:support-annotations:26.0.1"
-    ]
-}
-
-apply plugin: 'android-reporting'
